@@ -1,8 +1,10 @@
 package ch.heigvd.api.mailrobot.config;
 
 import ch.heigvd.api.mailrobot.model.mail.Person;
-
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -10,15 +12,14 @@ import java.util.Properties;
 /**
  * @author Bogale Tegest & Ferchichi Ahmed Farouk
  */
-public class ConfigurationManager {
+public class ConfigurationManager implements  IConfigurationManager  {
 
     private String smtpServerAddress;
     private int smtpServerPort;
     private final List<Person> victims;
     private final List<String> messages;
-    private int numberOFGroups;
+    private int numberOfGroups;
     private List<Person> witnessesToCC;
-
 
 
     public ConfigurationManager() throws IOException {
@@ -35,7 +36,7 @@ public class ConfigurationManager {
 
         this.smtpServerAddress = properties.getProperty("smtpServerAddress");
         this.smtpServerPort = Integer.parseInt(properties.getProperty("smtpServerPort"));
-        this.numberOFGroups = Integer.parseInt(properties.getProperty("numberOfGroups"));
+        this.numberOfGroups = Integer.parseInt(properties.getProperty("numberOfGroups"));
 
         this.witnessesToCC = new ArrayList<>();
         String witnesses = properties.getProperty("witnessesToCC");
@@ -84,12 +85,31 @@ public class ConfigurationManager {
         return result;
     }
 
+    @Override
     public List<Person> getVictims() {
         return victims;
     }
-
+    @Override
     public List<String> getMessages() {
         return messages;
+    }
+
+    public String getSmtpServerAddress() {
+        return smtpServerAddress;
+    }
+
+    public int getSmtpServerPort() {
+        return smtpServerPort;
+    }
+
+    @Override
+    public int getNumberOfGroups() {
+        return numberOfGroups;
+    }
+
+    @Override
+    public List<Person> getWitnessesToCC() {
+        return witnessesToCC;
     }
 
 

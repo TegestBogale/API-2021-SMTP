@@ -9,12 +9,11 @@ import java.util.logging.Logger;
 /**
  * @author Bogale Tegest & Ferchichi Ahmed Farouk
  */
-public class SmtpClient {
+public class SmtpClient implements ISmtpClient {
     private static final Logger LOG = Logger.getLogger(SmtpClient.class.getName());
 
-    private String smtpServerAddress;
+    private final String smtpServerAddress;
     private int smtpServerPort = 25;
-
     private Socket socket;
     private PrintWriter writer;
     private BufferedReader reader;
@@ -24,7 +23,7 @@ public class SmtpClient {
         this.smtpServerPort = port;
     }
 
-    //@Override
+    @Override
     public void sendMessage(Message message) throws IOException{
         LOG.info("Sending message via SMTP");
         Socket socket = new Socket(smtpServerAddress, smtpServerPort);

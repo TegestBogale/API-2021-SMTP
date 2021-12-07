@@ -20,6 +20,9 @@ public class Prank {
     public void setMessage(String message) {
         this.message = message;
     }
+    public String getMessage() {
+        return message;
+    }
 
     public void setVictimSender(Person victimSender) {
         this.victimSender = victimSender;
@@ -29,22 +32,14 @@ public class Prank {
         return victimSender;
     }
 
-    public String getMessage() {
-        return message;
-    }
-
-    public ArrayList<Person> getVictimRecipients() {
-        return new ArrayList<>(victimRecipients);
-    }
-
-    public ArrayList<Person> getWitnessRecipients() {
-        return new ArrayList<>(witnessRecipients);
-    }
-
     public void addVictimRecipients(List<Person> victims) {
         for (Person p : victims) {
             victimRecipients.add(p);
         }
+    }
+
+    public ArrayList<Person> getVictimRecipients() {
+        return new ArrayList<>(victimRecipients);
     }
     public void addWitnessRecipients(List<Person> victims) {
         for (Person p : victims) {
@@ -52,7 +47,9 @@ public class Prank {
         }
     }
 
-
+    public ArrayList<Person> getWitnessRecipients() {
+        return new ArrayList<>(witnessRecipients);
+    }
     public Message generateMessage() {
         Message msg = new Message();
         msg.setBody(this.message + "\r\n" + victimSender.getFirstName());

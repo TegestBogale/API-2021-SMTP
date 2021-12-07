@@ -1,11 +1,11 @@
 package ch.heigvd.api.mailrobot.model.prank;
 
+import ch.heigvd.api.mailrobot.config.ConfigurationManager;
 import ch.heigvd.api.mailrobot.config.IConfigurationManager;
 import ch.heigvd.api.mailrobot.model.mail.Group;
 import ch.heigvd.api.mailrobot.model.mail.Person;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.logging.Logger;
@@ -20,6 +20,7 @@ public class PrankGenerator {
         this.configurationManager = configurationManager;
     }
 
+
     public List<Prank> generatePranks() {
         List<Prank> pranks = new ArrayList<>();
 
@@ -29,10 +30,11 @@ public class PrankGenerator {
         int numberOfGroups = configurationManager.getNumberOfGroups();
         int numberOfVictims = configurationManager.getVictims().size();
 
-        //At least 3 victims per group
+        // Au moins 3 victimes par groupe
         if (numberOfVictims / numberOfGroups < 3) {
             numberOfGroups = numberOfVictims / 3;
-            LOG.warning("There are not enough victims to generate the desired number of groups. We can only generate a max of " + numberOfGroups + " groups" +
+            LOG.warning("There are not enough victims to generate the desired number of groups." +
+                    " We can only generate a max of " + numberOfGroups + " groups" +
                     "to have at least 3 victims per group.");
         }
 

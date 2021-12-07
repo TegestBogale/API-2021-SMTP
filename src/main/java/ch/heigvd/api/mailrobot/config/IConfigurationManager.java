@@ -2,7 +2,6 @@ package ch.heigvd.api.mailrobot.config;
 
 import ch.heigvd.api.mailrobot.model.mail.Person;
 
-import java.util.Collection;
 import java.util.List;
 
 /**

@@ -1,0 +1,1 @@
+docker run -p 25:25 ferchichi/docker-smtp
