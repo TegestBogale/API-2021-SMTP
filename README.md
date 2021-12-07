@@ -1,6 +1,6 @@
 # API_Labo04_SMTP
 
-##Description 
+## Description 
 MailRobot est un programme qui vous permet de vous faire passer pour quelqu'un d'autre et d'envoyer des
 blagues par mail à des victimes de vos choix. 
 
@@ -30,7 +30,7 @@ dossier src afin d'envoyer les blagues automatiquement :
 Il est également possible de faire des tests avant d'envoyer les blagues. Pour ce faire, vous pouvez utiliser le 
  serveur MockMock qui se trouve dans le dossier docker.
 
-####Procédure pour effectuer un test
+#### Procédure pour effectuer un test
 * Installer docker et le lancer
 * Depuis le dossier docker, lancer les commandes suivantes : ./build-image.sh ensuite ./run-container.sh.
 * Modifier le fichier de configuration afin d'utiliser l'adresse ip 127.0.0.1 et le numéro de port 8281

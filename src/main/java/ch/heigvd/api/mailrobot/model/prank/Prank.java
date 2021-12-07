@@ -38,7 +38,7 @@ public class Prank {
         }
     }
 
-    public ArrayList<Person> getVictimRecipients() {
+    public List<Person> getVictimRecipients() {
         return new ArrayList<>(victimRecipients);
     }
     public void addWitnessRecipients(List<Person> victims) {
@@ -47,7 +47,7 @@ public class Prank {
         }
     }
 
-    public ArrayList<Person> getWitnessRecipients() {
+    public List<Person> getWitnessRecipients() {
         return new ArrayList<>(witnessRecipients);
     }
     public Message generateMessage() {

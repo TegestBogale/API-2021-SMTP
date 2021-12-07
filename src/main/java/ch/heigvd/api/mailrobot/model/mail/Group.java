@@ -1,19 +1,20 @@
 package ch.heigvd.api.mailrobot.model.mail;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Bogale Tegest & Ferchichi Ahmed Farouk
  */
 public class Group {
 
-    private final ArrayList<Person> members = new ArrayList<>();
+    private final List<Person> members = new ArrayList<>();
 
     public void addMemeber(Person person){
         members.add(person);
     }
 
-    public ArrayList<Person> getMembers(){
+    public List<Person> getMembers(){
         return new ArrayList<>(members);
     }
 }

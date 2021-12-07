@@ -51,7 +51,7 @@ public class PrankGenerator {
             prank.addWitnessRecipients(configurationManager.getWitnessesToCC());
 
             String message = messages.get(messageIndex);
-            messageIndex = (messageIndex + 1) % message.length();
+            messageIndex = (messageIndex + 1) % message.length() - 1;
             prank.setMessage(message);
 
             pranks.add(prank);
