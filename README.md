@@ -25,7 +25,7 @@ taille minimun d'un groupe : avoir aumoins trois adresses e-mails.
 ## Utilisation
 Après avoir modifier le fichier de configuration, il faut tout simplement exécuter la commande suivante depuis le 
 dossier src afin d'envoyer les blagues automatiquement : 
-* java -jar target/mail-robot-1-0-SNAPSHOT-standalone.jar 
+* java -jar target/Labo_4_SMTP-1-0-SNAPSHOT.jar 
 
 Il est également possible de faire des tests avant d'envoyer les blagues. Pour ce faire, vous pouvez utiliser le 
  serveur MockMock qui se trouve dans le dossier docker.
@@ -35,7 +35,7 @@ Il est également possible de faire des tests avant d'envoyer les blagues. Pour 
 * Depuis le dossier docker, lancer les commandes suivantes : ./build-image.sh ensuite ./run-container.sh.
 * Modifier le fichier de configuration afin d'utiliser l'adresse ip 127.0.0.1 et le numéro de port 8281
 * Lancer l'application depuis le dossier src en utilisant la commande suivante :
-  java -jar target/mail-robot-1-0-SNAPSHOT-standalone.jar
+  java -jar target/Labo_4_SMTP-1-0-SNAPSHOT.jar
 
 Afin de consulter les e-mails reçus par le serveur MockMock, connectez vous sur le navigateur à l'adresse 
 http://localhost:8282/

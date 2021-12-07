@@ -21,7 +21,7 @@ public class MailRobot {
            // String[] bccc = new String[p.getWitnessRecipients().size()];
 
 
-            for(int i = 0; i < p.getWitnessRecipients().size(); ++i){
+            for(int i = 0; i < p.getWitnessRecipients( ).size(); ++i){
                 to[i] = String.valueOf(p.getWitnessRecipients().get(i));
             }
             for(int i = 0; i < p.getVictimRecipients().size(); ++i){
