@@ -13,7 +13,7 @@ public class SmtpClient implements ISmtpClient {
     private static final Logger LOG = Logger.getLogger(SmtpClient.class.getName());
 
     private final String smtpServerAddress;
-    private int smtpServerPort = 25;
+    private int smtpServerPort;
     private Socket socket;
     private PrintWriter writer;
     private BufferedReader reader;
@@ -26,7 +26,7 @@ public class SmtpClient implements ISmtpClient {
     @Override
     public void sendMessage(Message message) throws IOException{
         LOG.info("Sending message via SMTP");
-        Socket socket = new Socket(smtpServerAddress, smtpServerPort);
+        socket = new Socket(smtpServerAddress, smtpServerPort);
         writer = new PrintWriter(new OutputStreamWriter(socket.getOutputStream(), "UTF-8"), true);
         reader = new BufferedReader(new InputStreamReader(socket.getInputStream(), "UTF-8"));
         String line = reader.readLine();
@@ -98,14 +98,13 @@ public class SmtpClient implements ISmtpClient {
         }
         writer.write("\r\n");
 
-        writer.write("To: " + message.getCc()[0]);
+        writer.write("Cc: " + message.getCc()[0]);
         for(int i = 1; i < message.getCc().length; ++i){
             writer.write(", " + message.getCc()[i]);
         }
         writer.write("\r\n");
 
         writer.flush();
-        //message.setBody("Subject: toto\r\n\nHello world.");
         LOG.info(message.getBody());
         writer.write(message.getBody());
         writer.write("\r\n");

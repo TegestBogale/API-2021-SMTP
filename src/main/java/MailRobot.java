@@ -18,23 +18,20 @@ public class MailRobot {
             Message message = new Message();
             String[] to = new String[p.getVictimRecipients().size()];
             String[] Cc = new String[p.getWitnessRecipients().size()];
-           // String[] bccc = new String[p.getWitnessRecipients().size()];
-
 
             for(int i = 0; i < p.getWitnessRecipients( ).size(); ++i){
-                to[i] = String.valueOf(p.getWitnessRecipients().get(i));
+                Cc[i] = String.valueOf(p.getWitnessRecipients().get(i).getAddress());
             }
             for(int i = 0; i < p.getVictimRecipients().size(); ++i){
-                to[i] = String.valueOf(p.getVictimRecipients().get(i));
+                to[i] = String.valueOf(p.getVictimRecipients().get(i).getAddress());
             }
 
             message.setFrom(p.getVictimSender().getAddress());
             message.setTo(to);
             message.setCc(Cc);
-            message.setSubject(p.getMessage());
             message.setBody(p.getMessage());
 
-            smtpClient.sendMessage(p.generateMessage());
+            smtpClient.sendMessage(message);
         }
     }
 
