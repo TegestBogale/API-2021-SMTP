@@ -19,7 +19,7 @@ COPY MockMock.jar /opt/app/MockMock.jar
 # assign random ports for each EXPOSEd port. We can then use the docker port command to know the port
 # numbers that have been selected.
 #
-EXPOSE 2525 8282
+EXPOSE 8281 8282
 
 #
 # This is the command that is executed when the Docker container starts
