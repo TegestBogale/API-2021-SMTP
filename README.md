@@ -43,7 +43,7 @@ http://localhost:8282/
 
 ## Implémentation du programme
 ### Diagramme de classe
-
+ Voir : figures/labo4_SMTP.uml
 
 ### Descriptions des classes dans les différents packages
 ##### Package config 

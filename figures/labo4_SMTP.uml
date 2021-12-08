@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>D:/HEIG2emeLabo/API/labo4_SMTP</OriginalElement>
+  <nodes>
+    <node x="315.0" y="555.0">ch.heigvd.api.mailrobot.smtp.SmtpClient</node>
+    <node x="27.5" y="0.0">ch.heigvd.api.mailrobot.config.IConfigurationManager</node>
+    <node x="315.0" y="449.0">ch.heigvd.api.mailrobot.smtp.ISmtpClient</node>
+    <node x="0.0" y="172.0">ch.heigvd.api.mailrobot.config.ConfigurationManager</node>
+    <node x="349.0" y="726.0">ch.heigvd.api.mailrobot.model.mail.Group</node>
+    <node x="563.0" y="449.0">ch.heigvd.api.mailrobot.model.mail.Person</node>
+    <node x="0.0" y="726.0">ch.heigvd.api.mailrobot.model.prank.PrankGenerator</node>
+    <node x="593.0" y="726.0">MailRobot</node>
+    <node x="0.0" y="449.0">ch.heigvd.api.mailrobot.model.prank.Prank</node>
+    <node x="330.0" y="0.0">ch.heigvd.api.mailrobot.model.mail.Message</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ch.heigvd.api.mailrobot.smtp.SmtpClient" target="ch.heigvd.api.mailrobot.smtp.ISmtpClient" relationship="REALIZATION">
+      <point x="0.0" y="-28.0" />
+      <point x="0.0" y="28.0" />
+    </edge>
+    <edge source="ch.heigvd.api.mailrobot.config.ConfigurationManager" target="ch.heigvd.api.mailrobot.config.IConfigurationManager" relationship="REALIZATION">
+      <point x="0.0" y="-116.0" />
+      <point x="0.0" y="61.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.829611650485437" showDependencies="false" x="545.7683453863813" y="416.50736699140145" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
