@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # Ask maven to build the executable jar file from the source files
