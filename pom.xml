@@ -12,5 +12,23 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
+    <build>
+    <pluginManagement>
+    <plugins>
+    <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <configuration>
+                        <archive>
+                            <manifest>
+                                <addClasspath>true</addClasspath>
+                                <mainClass>MailRobot</mainClass>
+                            </manifest>
+                        </archive>
+                    </configuration>
+                </plugin>
+    </plugins>
+    </pluginManagement>
+    </build>
 
 </project>
