@@ -9,10 +9,10 @@ RUN apt-get update && \
 #
 # When we build the image, we copy the executable jar in the image file system.
 #
-COPY MockMock.jar.jar /opt/app/MockMock.jar
+COPY MockMock.jar /opt/app/MockMock.jar
 
 #
-# Our application will accept TCP connections on port 2205. Note that the EXPOSE statement
+# Our application will accept TCP connections on port 8281. Note that the EXPOSE statement
 # does not make the container accessible via the host. For the container to really be accessible,
 # we must either use the -p or the -P flag when using the docker run command. With -p, we can
 # specify an explicit port mapping (and EXPOSE is not even required). With -P, we let Docker
