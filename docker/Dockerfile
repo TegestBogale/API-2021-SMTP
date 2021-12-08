@@ -1,4 +1,4 @@
-FROM openjdk:11-jre
+FROM openjdk:11
 MAINTAINER Tegest Bogale <tegest.bogale@heig-vd.ch>
 
 # Install netcat, so that we can demonstrate container-to-container communication
@@ -9,7 +9,7 @@ RUN apt-get update && \
 #
 # When we build the image, we copy the executable jar in the image file system.
 #
-COPY Labo_4_SMTP-1.0-SNAPSHOT-standalone.jar /opt/app/server.jar
+COPY MockMock.jar.jar /opt/app/MockMock.jar
 
 #
 # Our application will accept TCP connections on port 2205. Note that the EXPOSE statement
@@ -19,9 +19,9 @@ COPY Labo_4_SMTP-1.0-SNAPSHOT-standalone.jar /opt/app/server.jar
 # assign random ports for each EXPOSEd port. We can then use the docker port command to know the port
 # numbers that have been selected.
 #
-EXPOSE 2205
+EXPOSE 8281 8282
 
 #
 # This is the command that is executed when the Docker container starts
 #
-CMD ["java", "-jar", "/opt/app/server.jar"]
+CMD ["java", "-jar", "/opt/app/MockMock.jar", "-p", "8281"]
