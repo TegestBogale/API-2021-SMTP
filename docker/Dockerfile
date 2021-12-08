@@ -24,4 +24,4 @@ EXPOSE 8281 8282
 #
 # This is the command that is executed when the Docker container starts
 #
-CMD ["java", "-jar", "/opt/app/MockMock.jar", "-p", "8281"]
+CMD ["java", "-jar", "/opt/app/MockMock.jar", "-p", "2525"]
