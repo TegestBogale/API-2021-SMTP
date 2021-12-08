@@ -1,1 +1,3 @@
-docker run -p 25:25 -p 8282:8282 ferchichi/docker-smtp
+#!/bin/bash
+
+docker run Tegest/Labo_4_SMTP-docker-mailRobot .

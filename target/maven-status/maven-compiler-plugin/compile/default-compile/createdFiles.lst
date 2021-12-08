@@ -1,0 +1,10 @@
+ch\heigvd\api\mailrobot\smtp\SmtpClient.class
+MailRobot.class
+ch\heigvd\api\mailrobot\smtp\ISmtpClient.class
+ch\heigvd\api\mailrobot\model\mail\Person.class
+ch\heigvd\api\mailrobot\config\IConfigurationManager.class
+ch\heigvd\api\mailrobot\config\ConfigurationManager.class
+ch\heigvd\api\mailrobot\model\mail\Message.class
+ch\heigvd\api\mailrobot\model\prank\PrankGenerator.class
+ch\heigvd\api\mailrobot\model\prank\Prank.class
+ch\heigvd\api\mailrobot\model\mail\Group.class
